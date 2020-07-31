@@ -1,6 +1,11 @@
-const ourGroup = ["Cam", "Steven", "Chris"];
-const theGreatest = ourGroup();
+const express = require('express');
+const app = express();
 
-if (ourGroup = theGreatest) {
-    console.log("We Da Best");
-}
+// NEW ROUTE
+app.get('/commBoard/new', (request, response) => {
+    console.log("This is homepage")
+})
+
+app.listen(3000, () => {
+    console.log("commBoard working")
+})

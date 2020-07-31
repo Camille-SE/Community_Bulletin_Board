@@ -1,3 +1,4 @@
+
 # Community-Bulletine-Board
 
 ## Project-Two-Description
@@ -12,3 +13,6 @@ For this project we created an ERD *shown above* to demonstrate the connection o
 If the user would click on "today's event" from the homepage, they would be directed to the page of that event, however if the user were to click on "community events", they would be directed to all events listed and so on.
 
 Next we created a wireframe that would roughly show the frame of what we wanted those pages to look like when we were finished. <em>shown <em>below
+=======
+communitybulletinboard
+

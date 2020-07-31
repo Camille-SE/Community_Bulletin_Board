@@ -1,4 +1,4 @@
-
+// require statments
 const express = require('express')
 const app = express()
 
@@ -8,14 +8,13 @@ const mongoose = require('mongoose')
 const eventsController = require('./controllers/events.js')
 const futureEventsController = require('./controllers/futureEvents.js')
 
+// middleware
 app.use('/events', eventsController)
-
 app.use(methodOverride('_method'))
-
 app.use(express.urlencoded({ extended: false }))
 
-
-const connectionString = 'mongodb://localhost/CRUD-MEN-lab-part-1-CR';
+// database connection
+const connectionString = 'mongodb://localhost/community_bulletin_board';
 
 mongoose.connect(connectionString, {
     useNewUrlParser: true,
@@ -37,6 +36,7 @@ mongoose.connection.on('error', (err) => {
 
 });
 
+// routes
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
@@ -44,6 +44,4 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => {
     console.log("I'm Listening")
-
-
-
+});

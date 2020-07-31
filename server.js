@@ -1,3 +1,4 @@
+
 const express = require('express')
 const app = express()
 
@@ -6,8 +7,6 @@ const mongoose = require('mongoose')
 
 const eventsController = require('./controllers/events.js')
 const futureEventsController = require('./controllers/futureEvents.js')
-
-
 
 app.use('/events', eventsController)
 
@@ -38,11 +37,6 @@ mongoose.connection.on('error', (err) => {
 
 });
 
-
-
-
-
-
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
@@ -50,4 +44,6 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => {
     console.log("I'm Listening")
-})
+
+
+

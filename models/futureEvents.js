@@ -4,7 +4,7 @@ const Events = require('./events')
 const futureSchema = new mongoose.Schema({
     title: {type: String, required:true},
     location: {type: String, required:true},
-    timeStamp: {type: Date},
+    date: {type:String, require:true},
     cost: {type: String, required: false},
     body: [{
         type: mongoose.Schema.Types.ObjectId,

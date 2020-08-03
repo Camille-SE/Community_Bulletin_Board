@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body class="header">
+    <header>
+        <h1>Future Community Events</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/futureEvents/new">Create a New Event</a>
+                </li>
+                <li>
+                    <a href="/futureEvents">Upcoming Events </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+<main>
+    <h2>Todays Events</h2>
+    <ul>
+        <% foundFutureEvents.forEach(futureEvents => { %>
+        <li>
+            <a href="/futureEvents/<%= futurEvents._id %>"><%= futureEvents.title %> - <%= futureEvents.location %>
+                (<%= futureEvents.date %>) </a>
+        </li>
+        <% }) %>
+    </ul>
+</main>
+
+</html>

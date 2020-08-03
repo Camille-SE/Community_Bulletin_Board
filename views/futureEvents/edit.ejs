@@ -23,9 +23,12 @@
     <main>
         <h2>Future Events Edit:</h2>
         <form action="/futureEvents" method="POST">
-            Title Of Event: <input type="text" name="title" />
-            Location: <input type="text" name="location" />
-            Date: <input type="date" name="date">
+            Title Of Event: <input type="text" name="title" /><br/>
+            Location: <input type="text" name="location" /><br/>
+            Date: <input type="date" name="date"/><br/>
+            Cost: <input type="text" name="cost"><br/>
+            Details: <textarea name="body"></textarea><br/>
+            Image Url: <input type="url" name="img"><br/>
             <input type="submit" value="Edit Future Event">
         </form>
     </main>

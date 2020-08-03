@@ -18,19 +18,19 @@
                     <a href="/futureEvents/new">Create a New Event</a>
                 </li>
                 <li>
-                    <a href="/futureEvents">Upcoming Events </a>
+                    <a href="/events">Todays Events </a>
                 </li>
             </ul>
         </nav>
     </header>
 </body>
 <main>
-    <h2>Todays Events</h2>
+    <h2>Upcoming Events</h2>
     <ul>
-        <% foundFutureEvents.forEach(futureEvents => { %>
+        <% foundFutureEvents.forEach(futureEvent => { %>
         <li>
-            <a href="/futureEvents/<%= futurEvents._id %>"><%= futureEvents.title %> - <%= futureEvents.location %>
-                (<%= futureEvents.date %>) </a>
+            <a href="/futureEvents/<%= futureEvent._id %>"><%= futureEvent.title %> - <%= futureEvent.location %>
+                (<%= futureEvent.date %>) </a>
         </li>
         <% }) %>
     </ul>

@@ -20,13 +20,13 @@
 		</header>
 		<main>
 			<h2>Events Edit:</h2>
-			<form action="/events" method="POST">
-                Title Of Event: <input type="text" name="title" /><br/>
-				Location: <input type="text" name="location" /><br/>
-				Date: <input type="date" name="date"/><br/>
-				Cost: <input type="text" name="cost"><br/>
-				Details: <textarea name="body"></textarea><br/>
-				Image Url: <input type="url" name="img"><br/>
+			<form action="/events/<%= foundEvent._id %>?_method=PUT"  method="POST">
+                Title Of Event: <input type="text" name="title" value="<%= foundEvent.title %>" /><br/>
+				Location: <input type="text" name="location" value="<%= foundEvent.location %>"/><br/>
+				Date: <input type="date" name="date" value="<%= foundEvent.date %>"/><br/>
+				Cost: <input type="text" name="cost" value="<%= foundEvent.cost %>"/><br/>
+				Details: <textarea name="body"><%= foundEvent.body %></textarea><br/>
+				Image Url: <input type="url" name="img" value="<%= foundEvent.img %>"><br/>
                 <input type="submit" value="Edit Event">
             </form>
 		</main>

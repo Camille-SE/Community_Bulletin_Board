@@ -1,5 +1,5 @@
 
-# Community Bulletine Board
+# Community Bulletin Board
 
 ## Project Two Description
 For this project we have decided to create a user managed bullentin board webpage where users can search within their community and be able to view or create events that are happening nearby . These posts can include the location of the event, the price of the event and users may have the ability to see future events. This webpage will also give users the ability to create, read, update and delete their posts. 

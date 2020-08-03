@@ -65,4 +65,14 @@ router.post('/', async (req, res) => {
   }
 });
 
+// ----Delete Route
+router.delete('/:id', async (req, res) => {
+  try {
+    await Today.findByIdAndDelete(req.params.id);
+    res.redirect('/events');
+  } catch (error) {
+    res.send(err);
+  }
+});
+
 module.exports = router;

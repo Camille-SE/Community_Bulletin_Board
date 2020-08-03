@@ -1,16 +1,14 @@
 const mongoose = require('mongoose');
-const { type } = require('os');
-const { stringify } = require('querystring');
-const { StringDecoder } = require('string_decoder');
 
-const eventsSchema = new mongoose.Schema({
+const eventsSchema= new mongoose.Schema({
     title: {type: String, required:true},
     location: {type: String, required:true},
-    body: {type:String, required: true},
-    timeStamp: {type: Date},
+    date: {type:String, require:true},
     cost: {type: String, required: false},
+    body: {type: String},
+    img: String
 });
 
-const Events = mongoose.model('Events', eventsSchema)
+const Today = mongoose.model('Today', eventsSchema)
 
-module.exports = Events;
+module.exports = Today;

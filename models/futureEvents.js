@@ -6,10 +6,8 @@ const futureSchema = new mongoose.Schema({
     location: {type: String, required:true},
     date: {type:String, require:true},
     cost: {type: String, required: false},
-    body: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Events'
-    }]
+    body: {type: String},
+    img: String
 });
 
 const Future = mongoose.model('Future', futureSchema)

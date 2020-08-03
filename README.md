@@ -1,7 +1,7 @@
 
-# Community-Bulletine-Board
+# Community Bulletine Board
 
-## Project-Two-Description
+## Project Two Description
 For this project we have decided to create a bullentin board webpage where people can search within their community and be able to see events and things for sale nearby. This will include the location of the event, the price of the event and may have the ability to see future events. 
 
 The page will also include "today's event" so that the user can select that event and see all the details. Users will also be able to post, edit and delete their own items that they have for sale.

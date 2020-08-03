@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<header>
-			<h1>Show Page for <%= foundEvent.name %></h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li>
-						<a href="/events">Todays Events</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section>
-				<h2>Events Attributes:</h2>
-				<ul>
-					<li>Event: <%= foundEvent.title %></li>
-				</ul>
-            </section>
-            <section>
-                <form action="/events/<%= foundEvent._id %>?_method=DELETE" method="post">
-                    <input type="submit" value="Delete post"/>
-                </form>
-            </section>
-            <section>
-                <a href="/events/<%= foundEvent._id %>/edit">Edit</a>
-			</section>
-		</main>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+<body>
+	<header>
+		<h1>Show Page for <%= foundEvent.name %></h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/events">Todays Events</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Events Attributes:</h2>
+			<ul>
+				<li>Event: <%= foundEvent.title %></li>
+			</ul>
+		</section>
+		<section>
+			<form action="/events/<%= foundEvent._id %>?_method=DELETE" method="post">
+				<input type="submit" value="Delete post" />
+			</form>
+		</section>
+		<section>
+			<a href="/events/<%= foundEvent._id %>/edit">Edit</a>
+		</section>
+	</main>
+</body>
+
 </html>

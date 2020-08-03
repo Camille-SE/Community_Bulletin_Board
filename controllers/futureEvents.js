@@ -6,7 +6,7 @@ const Future = require('../models/futureEvents')
 
 router.get('/', async (req, res) => {
     try {
-        const events = await FutureEvents.find({});
+        const futureEvents = await FutureEvents.find({});
         res.render('events/index.ejs', {
             foundFutureEvents: futureEvents,
         });
@@ -23,7 +23,7 @@ router.get('/new', (req, res) => {
 //-----Get Events Show
 router.get('/:id', async (req, res) => {
     try {
-        const event = await FutureEvents.findById(req.params.id);
+        const futureEvent = await FutureEvents.findById(req.params.id);
         res.render('futureEvents/show.ejs', {
             foundFutureEvent: futureEvent,
         });
@@ -35,20 +35,10 @@ router.get('/:id', async (req, res) => {
 //-----Get Event Edit
 router.get('/:id/edit', async (req, res) => {
     try {
-        const event = await FutureEvents.findById(req.params.id);
+        const futureEvent = await FutureEvents.findById(req.params.id);
         res.render('futureEvents/edit.ejs', {
             foundFutureEvent: futureEvent,
         });
-    } catch (error) {
-        res.send(err);
-    }
-});
-
-//-----Get Events Update
-router.put('/:id', async (req, res) => {
-    try {
-        await Future.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        res.redirect('/futureEvents');
     } catch (error) {
         res.send(err);
     }
@@ -65,7 +55,24 @@ router.post('/', async (req, res) => {
     }
 });
 
+// ----Delete Route
+router.delete('/:id', async (req, res) => {
+    try {
+      await Future.findByIdAndDelete(req.params.id);
+      res.redirect('/futureEvents');
+    } catch (error) {
+      res.send(err);
+    }
+  });
 
-
+//-----Get Events Update
+router.put('/:id', async (req, res) => {
+    try {
+        await Future.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.redirect('/futureEvents');
+    } catch (error) {
+        res.send(err);
+    }
+});
 
 module.exports = router;

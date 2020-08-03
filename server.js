@@ -1,5 +1,6 @@
 //--------------------------require statments
 const express = require("express")
+const ejsLayouts = require("express-ejs-layouts");
 const methodOverride = require("method-override")
 const app = express()
 const router = express.Router()
@@ -8,12 +9,15 @@ const futureEventsController = require('./controllers/futureEvents')
 require('./db/db')
 
 //--------------------------middleware
+app.set('view engine', 'ejs');
+app.use(ejsLayouts);
+app.use(express.static(__dirname + '/public/'));
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }))
 
 //--------------------------routes
 app.get('/', (req, res) => {
-    res.render('home.ejs')
+    res.render('home')
 })
 
 // ----------Events Routes

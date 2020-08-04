@@ -35,7 +35,7 @@ router.get('/:id', async (req, res) => {
 //-----Get Event Edit
 router.get('/:id/edit', async (req, res) => {
     try {
-        const futureEvent = await Future.findById(req.params.id);
+        const futureEvent = await FutureEvents.findById(req.params.id);
         res.render('futureEvents/edit.ejs', {
             foundFutureEvent: futureEvent,
         });

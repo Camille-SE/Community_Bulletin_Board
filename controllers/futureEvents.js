@@ -6,8 +6,13 @@ const Future = require('../models/futureEvents')
 
 router.get('/', async (req, res) => {
     try {
+<<<<<<< HEAD
         const futureEvents = await FutureEvents.find({});
         res.render('events/index', {
+=======
+        const futureEvents = await Future.find({});
+        res.render('futureEvents/index.ejs', {
+>>>>>>> c8d05c561e69fa600adc80f871a5204488dc797e
             foundFutureEvents: futureEvents,
         });
     } catch (error) {
@@ -23,7 +28,7 @@ router.get('/new', (req, res) => {
 //-----Get Events Show
 router.get('/:id', async (req, res) => {
     try {
-        const futureEvent = await FutureEvents.findById(req.params.id);
+        const futureEvent = await Future.findById(req.params.id);
         res.render('futureEvents/show.ejs', {
             foundFutureEvent: futureEvent,
         });
@@ -35,7 +40,7 @@ router.get('/:id', async (req, res) => {
 //-----Get Event Edit
 router.get('/:id/edit', async (req, res) => {
     try {
-        const futureEvent = await FutureEvents.findById(req.params.id);
+        const futureEvent = await Future.findById(req.params.id);
         res.render('futureEvents/edit.ejs', {
             foundFutureEvent: futureEvent,
         });

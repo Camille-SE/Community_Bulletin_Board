@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <header>
     <h1>Future Community Events</h1>
     <nav>
@@ -15,13 +16,40 @@
     </nav>
 </header>
 
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body class="header">
+    <header>
+        <h1>Community Events</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/futureEvents/new">Create a New Event</a>
+                </li>
+                <li>
+                    <a href="/events">Todays Events </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+>>>>>>> c8d05c561e69fa600adc80f871a5204488dc797e
 <main>
-    <h2>Todays Events</h2>
+    <h2>Upcoming Events</h2>
     <ul>
-        <% foundFutureEvents.forEach(futureEvents => { %>
+        <% foundFutureEvents.forEach(futureEvent => { %>
         <li>
-            <a href="/futureEvents/<%= futurEvents._id %>"><%= futureEvents.title %> - <%= futureEvents.location %>
-                (<%= futureEvents.date %>) </a>
+            <a href="/futureEvents/<%= futureEvent._id %>"><%= futureEvent.title %> - <%= futureEvent.location %>
+                (<%= futureEvent.date %>) </a>
         </li>
         <% }) %>
     </ul>

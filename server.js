@@ -7,6 +7,7 @@ const router = express.Router()
 const eventsController = require('./controllers/events')
 const futureEventsController = require('./controllers/futureEvents')
 require('./db/db')
+app.use(express.static(__dirname + '/style'));
 
 //--------------------------middleware
 app.set('view engine', 'ejs');

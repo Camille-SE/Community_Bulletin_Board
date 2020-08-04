@@ -4,13 +4,25 @@
     <link defer rel="stylesheet" href="/style.css">
 </head>
 <body class="home">
-    <header>
+        <section>
+            <header>
+                <h1>Welcome Community Events</h1>
+                <button><a href="/logout">Logout</a></button>
+                <form action="/login">    
+                        Email:<input type="email" name="email" id="email" required>
+                        Password:<input type="password" name="password" id="password" required>
+                        <input type="submit" name="Login" id="login">
+                </form>
+            <a href="/register">Register</a>
+            </header>
+        </section>
+    <div>
         <h1>Welcome Community Events</h1>
         <nav class="start">
             <ul>
                 <li>
                     <a href="/events">Todays Events</a></br>
-                    <a href="events/new">Create Todays Event</a>
+                    <a href="/events/new">Create Todays Event</a>
                 </li>
                 <li>
                     <a href="/futureEvents">Upcoming Events</a></br>
@@ -18,6 +30,7 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </div>
+    
 </body>
 </html>

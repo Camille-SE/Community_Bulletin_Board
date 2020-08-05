@@ -8,12 +8,12 @@
             <header>
                 <h1>Welcome Community Events</h1>
                 <button><a href="/logout">Logout</a></button>
-                <form action="/login">    
+                <form action="/login" method="POST">    
                         Email:<input type="email" name="email" id="email" required>
                         Password:<input type="password" name="password" id="password" required>
                         <input type="submit" name="Login" id="login">
                 </form>
-            <a href="/register">Register</a>
+                <a href="/users/register">Register</a>
             </header>
         </section>
     <div>
@@ -21,16 +21,16 @@
         <nav class="start">
             <ul>
                 <li>
-                    <a href="/events">Todays Events</a></br>
-                    <a href="/events/new">Create Todays Event</a>
+                    <button><a href="/events">Todays Events</a></br></button>  
+                    <button><a id='eventsNew' href="/events/new">Create Todays Event</a></button></br>
+
                 </li>
                 <li>
-                    <a href="/futureEvents">Upcoming Events</a></br>
-                    <a href="/futureEvents/new">Create Upcoming Event</a>
+                    <button><a href="/futureEvents">Upcoming Events</a></br></button>
+                    <button><a class='eventsNew' href="/futureEvents/new">Create Upcoming Event</a></button></br>
                 </li>
             </ul>
         </nav>
     </div>
-    
 </body>
 </html>

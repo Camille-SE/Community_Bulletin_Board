@@ -17,7 +17,11 @@ router.get('/', async (req, res) => {
 
 //-----Get New Event
 router.get('/new', (req, res) => {
-    res.render('futureEvents/new.ejs');
+    if (req.session.loggedIn === true) {
+        res.render('futureEvents/new.ejs');
+      } else {
+        res.redirect('/');
+      }
 });
 
 //-----Get Events Show

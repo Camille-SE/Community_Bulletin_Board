@@ -11,7 +11,7 @@ The user will navigate to the webpage and sign in or register to the webpage. Th
 For this project we created an ERD *shown above* to demonstrate the connection of pages starting with the bulletin board homepage which will include the three options for posted events. If the user would click on *today's event* or *future events* from the homepage, they would be directed to the page of that specific event that will list all details for the user and they could also leave questions, comments or concerns on the event. If the user were to click on *community events* from the homepage, they would be directed to all events listed and so on.
 
 Next we created a wireframe that would roughly show the frame of what we wanted those pages to look like when we were finished. *shown below* 
-![Homepage](Homepage-Wireframe.png) 
+![Homepage](https://git.generalassemb.ly/christopherRyan01/community_bulletin_board/blob/cam/images/Homepage-Wireframe.png) 
 ![Events](Events-Wireframe.png)
 ![TodayEvent](Today-Wireframe.png)
 

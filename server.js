@@ -17,6 +17,7 @@ const sessionsController = require('./controllers/sessions')
 
 // ---DataBase
 require('./db/db')
+ 
 
 // ---MiddleWare
 app.use(session({
@@ -29,9 +30,11 @@ app.use(session({
 // ----Parse data
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }))
+app.set('view engine', 'ejs');
+app.use(ejsLayouts);
 
 // --StyleCSS
-app.use(express.static(__dirname + '/style'));
+app.use(express.static(__dirname + '/public/'));
 
 //---------------Routes
 app.get('/', (req, res) => {

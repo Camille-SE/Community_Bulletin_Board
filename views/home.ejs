@@ -1,84 +1,106 @@
-<head>
-    <meta charset="utf-8">
-    <title>Community Events</title>
-    <link defer rel="stylesheet" href="/style.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</head>
+
 <body class="home">
-        <section>
-            <header>
-                <h1>Welcome Community Events</h1>
-                <button><a href="/logout">Logout</a></button>
-                <form action="/login" method="POST">    
-                        Email:<input type="email" name="email" id="email" required>
-                        Password:<input type="password" name="password" id="password" required>
-                        <input type="submit" name="Login" id="login">
-                </form>
-                <a href="/users/register">Register</a>
-            </header>
-        </section>
+<section>
     <div>
         <h1>Welcome Community Events</h1>
-        <nav class="start">
-            <ul>
-                <li>
-                    <button><a href="/events">Todays Events</a></br></button>  
-                    <button><a  href="/events/new">Create Todays Event</a></button></br>
-
-                </li>
-                <li>
-                    <button><a href="/futureEvents">Upcoming Events</a></br></button>
-                    <button id="getEvents"><a  href="/futureEvents/new">Create Upcoming Event</a></button></br>
-                    
-                </li>
-            </ul>
-        </nav>
+        <form action="/login" method="POST">    
+                Email:<input type="email" name="email" id="email" required>
+                Password:<input type="password" name="password" id="password" required>
+                <input type="submit" name="Login" id="login">
+        </form>
+        <button><a href="/logout">Logout</a></button>
     </div>
-    <script type="text/javascript">
-        if(localStorage.getItem("welcome")){
-            if (localStorage.getItem("welcome") === "1" ){
-                let welcome = parseInt(localStorage.getItem("welcome"))
-                welcome++
-                localStorage.setItem("welcome", welcome)
-                swal({
-                    title: "Welcome To Community Events",
-                    text: "Please Login To Add Events",
-                    closeModel: false,
-                    closeOnClickOutside: false,
-                })
-                .then((page) => {
-                    if (page) {
-                        swal({
-                            title: "Thank You For UnderStanding",
-                            text:"Enjoy!!",
-                            icon: "success",
-                            buttons: false,
-                            timer: 1000,
-                        });
-                    };
-                });
-            }
-        } else {
-            localStorage.setItem("welcome", 1)
+</section>
+<div>
+    <h1>Welcome Community Events</h1>
+    <nav class="start">
+        <ul>
+            <li>
+                <button><a href="/events">Todays Events</a></br></button>  
+                <button><a  href="/events/new">Create Todays Event</a></button></br>
+
+            </li>
+            <li>
+                <button><a href="/futureEvents">Upcoming Events</a></br></button>
+                <button id="getEvents"><a  href="/futureEvents/new">Create Upcoming Event</a></button></br>
+                
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="slidershow middle">
+
+    <div class="slides">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="picture-1">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1594808985790-98a065b97476?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="picture-2">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="picture-3">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="picture-4">
+            </div>
+    </div>
+</div>
+
+
+    <div class="navigation">
+        <label for="r1" class="bar"></label>
+        <label for="r2" class="bar"></label>
+        <label for="r3" class="bar"></label>
+        <label for="r4" class="bar"></label>
+    </div>
+<script type="text/javascript">
+    if(localStorage.getItem("welcome")){
+        if (localStorage.getItem("welcome") === "1" ){
+            let welcome = parseInt(localStorage.getItem("welcome"))
+            welcome++
+            localStorage.setItem("welcome", welcome)
             swal({
-                    title: "Welcome To Community Events",
-                    text: "Please Login To Add Events",
-                    closeModel: false,
-                    closeOnClickOutside: false,
-                })
-                .then((page) => {
-                    if (page) {
-                        swal({
-                            title: "Thank You For UnderStanding",
-                            text:"Enjoy!!",
-                            icon: "success",
-                            buttons: false,
-                            timer: 1000,
-                        });
-                    };
-                });
+                title: "Welcome To Community Events",
+                text: "Please Login To Add Events",
+                closeModel: false,
+                closeOnClickOutside: false,
+            })
+            .then((page) => {
+                if (page) {
+                    swal({
+                        title: "Thank You For UnderStanding",
+                        text:"Enjoy!!",
+                        icon: "success",
+                        buttons: false,
+                        timer: 1000,
+                    });
+                };
+            });
         }
-    
-    </script>
-</body>
-</html>
+    } else {
+        localStorage.setItem("welcome", 1)
+        swal({
+                title: "Welcome To Community Events",
+                text: "Please Login To Add Events",
+                closeModel: false,
+                closeOnClickOutside: false,
+            })
+            .then((page) => {
+                if (page) {
+                    swal({
+                        title: "Thank You For UnderStanding",
+                        text:"Enjoy!!",
+                        icon: "success",
+                        buttons: false,
+                        timer: 1000,
+                    });
+                };
+            });
+    }
+</script>
+

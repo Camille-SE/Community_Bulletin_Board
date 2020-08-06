@@ -3,10 +3,9 @@ const express = require("express")
 const ejsLayouts = require("express-ejs-layouts");
 const methodOverride = require("method-override")
 const session = require('express-session')
-const passport = require("passport")
-const flash = require('connect-flash');
 const expressLayouts = require('express-ejs-layouts')
 const app = express()
+require('dotenv').config()
 const router = express.Router()
 
 // -----------Controllers
@@ -17,16 +16,15 @@ const sessionsController = require('./controllers/sessions')
 // ---DataBase
 require('./db/db')
 
-
 // ---MiddleWare
 app.use(session({
-    secret: "12s5s5s2c85s8c5e58c25s258",
-    // secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
   }))
 
 // ----Parse data
+
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }))
 app.set('view engine', 'ejs');

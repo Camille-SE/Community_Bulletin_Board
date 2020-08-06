@@ -6,8 +6,8 @@ const Future = require('../models/futureEvents')
 
 router.get('/', async (req, res) => {
     try {
-        const futureEvents = await FutureEvents.find({});
-        res.render('events/index', {
+        const futureEvents = await Future.find({});
+        res.render('futureEvents/index', {
             foundFutureEvents: futureEvents,
         });
     } catch (error) {

@@ -1,5 +1,6 @@
 //----------------Require Statments
 const express = require("express")
+const ejsLayouts = require("express-ejs-layouts");
 const methodOverride = require("method-override")
 const session = require('express-session')
 const passport = require("passport")
@@ -34,7 +35,7 @@ app.use(express.static(__dirname + '/style'));
 
 //---------------Routes
 app.get('/', (req, res) => {
-    res.render('home.ejs')
+    res.render('home')
 })
 
 // ----------Events Routes

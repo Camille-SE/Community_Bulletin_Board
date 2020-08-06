@@ -10,7 +10,7 @@ const Future = require('../models/futureEvents')
 router.get('/', async (req, res) => {
   try {
     const events = await Today.find({});
-    res.render('events/index.ejs', {
+    res.render('events/index', {
       foundEvents: events,
     });
   } catch (error) {

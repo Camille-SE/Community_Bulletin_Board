@@ -52,5 +52,59 @@
         <label for="r3" class="bar"></label>
         <label for="r4" class="bar"></label>
     </div>
+    <script type="text/javascript">
+
+
+
+
+        if(localStorage.getItem("welcome")){
+            if (localStorage.getItem("welcome") === "1" ){
+                let welcome = parseInt(localStorage.getItem("welcome"))
+                welcome++
+                localStorage.setItem("welcome", welcome)
+                swal({
+                    title: "Welcome To Community Events",
+                    text: "Please Login To Add Events",
+                    closeModel: false,
+                    closeOnClickOutside: false,
+                })
+                .then((page) => {
+                    if (page) {
+                        swal({
+                            title: "Thank You For UnderStanding",
+                            text:"Enjoy!!",
+                            icon: "success",
+                            buttons: false,
+                            timer: 1000,
+                        });
+                    };
+                });
+            }
+        } else {
+            localStorage.setItem("welcome", 1)
+            swal({
+                    title: "Welcome To Community Events",
+                    text: "Please Login To Add Events",
+                    closeModel: false,
+                    closeOnClickOutside: false,
+                })
+                .then((page) => {
+                    if (page) {
+                        swal({
+                            title: "Thank You For UnderStanding",
+                            text:"Enjoy!!",
+                            icon: "success",
+                            buttons: false,
+                            timer: 1000,
+                        });
+                    };
+                });
+        }
+    
+
+
+
+        
+    </script>
 </body>
 </html>

@@ -1,14 +1,8 @@
-<head>
-    <meta charset="utf-8">
-    <title>Community Events</title>
-    <link defer rel="stylesheet" href="/public/css/style.css">
-    <link defer rel="stylesheet" href="/public/css/sass/style.scss">
-</head>
-<body class="home">
-    <header>
+<div class="home">
+    <div>
         <h1>Welcome</h1>
         <h1>Community Events</h1>
-
+        
         <nav class="start">
             <ul>
                 <li>
@@ -21,7 +15,7 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </div>
     <div class="slidershow middle">
 
         <div class="slides">
@@ -52,11 +46,8 @@
         <label for="r3" class="bar"></label>
         <label for="r4" class="bar"></label>
     </div>
+
     <script type="text/javascript">
-
-
-
-
         if(localStorage.getItem("welcome")){
             if (localStorage.getItem("welcome") === "1" ){
                 let welcome = parseInt(localStorage.getItem("welcome"))
@@ -100,11 +91,5 @@
                     };
                 });
         }
-    
-
-
-
-        
     </script>
-</body>
-</html>
+</div>

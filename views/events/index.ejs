@@ -1,37 +1,26 @@
-<!DOCTYPE html>
-<html class="index">
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link defer rel="stylesheet" href="/style.css">
-		
-	</head>
-	<body class="header">
-		<header>
-			<h1>Community Events</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li>
-						<a href="/events/new">Create a New Event</a>
-					</li>
-					<li>
-						<a href="/futureEvents">Upcoming Events </a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-	</body>
-	<main>
-		<h2>Todays Events</h2>
+<header>
+	<h1>Today's Events</h1>
+	<nav>
 		<ul>
-			<% foundEvents.forEach(events => { %>
-				<li>
-					<a href="/events/<%= events._id %>"><%= events.title %> - <%= events.location %> (<%= events.date %>) </a>
-				</li>
-			<% }) %>
+			<li>
+				<a href="/">Home</a>
+			</li>
+			<li>
+				<a href="/events/new">Create a New Event</a>
+			</li>
+			<li>
+				<a href="/futureEvents">Upcoming Events </a>
+			</li>
 		</ul>
-	</main>
-</html>
+	</nav>
+</header>
+
+<main>
+	<ul>
+		<% foundEvents.forEach(events => { %>
+			<li>
+				<a href="/events/<%= events._id %>"><%= events.title %> - <%= events.location %> (<%= events.date %>) </a>
+			</li>
+		<% }) %>
+	</ul>
+</main>

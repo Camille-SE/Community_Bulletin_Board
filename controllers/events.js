@@ -3,6 +3,9 @@ const router = express.Router()
 const Today = require('../models/events')
 const Future = require('../models/futureEvents')
 
+
+
+
 // ---Index
 router.get('/', async (req, res) => {
   try {
@@ -17,7 +20,11 @@ router.get('/', async (req, res) => {
 
 //-----Get New Event
 router.get('/new', (req, res) => {
-  res.render('events/new.ejs');
+  if (req.session.loggedIn === true) {
+    res.render('events/new.ejs');
+  } else {
+    res.redirect('/');
+  }
 });
 
 //-----Get Events Show
@@ -28,7 +35,7 @@ router.get('/:id', async (req, res) => {
       foundEvent: event,
     });
   } catch (error) {
-    res.send(err);
+      res.send(err);
   }
 });
 

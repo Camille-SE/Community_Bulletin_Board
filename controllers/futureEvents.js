@@ -17,7 +17,11 @@ router.get('/', async (req, res) => {
 
 //-----Get New Event
 router.get('/new', (req, res) => {
-    res.render('futureEvents/new.ejs');
+    if (req.session.loggedIn === true) {
+        res.render('futureEvents/new.ejs');
+      } else {
+        res.redirect('/');
+      }
 });
 
 //-----Get Events Show
@@ -35,7 +39,7 @@ router.get('/:id', async (req, res) => {
 //-----Get Event Edit
 router.get('/:id/edit', async (req, res) => {
     try {
-        const futureEvent = await Future.findById(req.params.id);
+        const futureEvent = await FutureEvents.findById(req.params.id);
         res.render('futureEvents/edit.ejs', {
             foundFutureEvent: futureEvent,
         });

@@ -2,23 +2,23 @@
 	<h1>Today's Events</h1>
 	<nav>
 		<ul>
-			<li>
+			<li class="navHead">
 				<a href="/">Home</a>
 			</li>
-			<li>
+			<li class="navHead">
 				<a href="/events/new">Create a New Event</a>
 			</li>
-			<li>
+			<li class="navHead">
 				<a href="/futureEvents">Upcoming Events </a>
 			</li>
 		</ul>
 	</nav>
 </header>
 
-<main>
-	<ul>
+<main> 
+	<ul class="navHead">
 		<% foundEvents.forEach(events => { %>
-			<li>
+			<li >
 				<a href="/events/<%= events._id %>"><%= events.title %> - <%= events.location %> (<%= events.date %>) </a>
 			</li>
 		<% }) %>

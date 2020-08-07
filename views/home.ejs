@@ -1,40 +1,28 @@
-
-<body class="home">
-<section>
+<div class="home">
     <div>
-        <h1>Welcome Community Events</h1>
-        <form action="/login" method="POST">    
-                Email:<input type="email" name="email" id="email" required>
-                Password:<input type="password" name="password" id="password" required>
-                <input type="submit" name="Login" id="login">
-        </form>
-        <button><a href="/logout">Logout</a></button>
+        <h1>Welcome</h1>
+        <h1>Community Events</h1>
+        
+        <nav class="start">
+            <ul>
+                <li>
+                    <a href="/events">Todays Events</a></br>
+                    <a href="events/new">Create Todays Event</a>
+                </li>
+                <li>
+                    <a href="/futureEvents">Upcoming Events</a></br>
+                    <a href="/futureEvents/new">Create Upcoming Event</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-</section>
-<div>
-    <h1>Welcome Community Events</h1>
-    <nav class="start">
-        <ul>
-            <li>
-                <button><a href="/events">Todays Events</a></br></button>  
-                <button><a  href="/events/new">Create Todays Event</a></button></br>
+    <div class="slidershow middle">
 
-            </li>
-            <li>
-                <button><a href="/futureEvents">Upcoming Events</a></br></button>
-                <button id="getEvents"><a  href="/futureEvents/new">Create Upcoming Event</a></button></br>
-                
-            </li>
-        </ul>
-    </nav>
-</div>
-<div class="slidershow middle">
-
-    <div class="slides">
-        <input type="radio" name="r" id="r1" checked>
-        <input type="radio" name="r" id="r2">
-        <input type="radio" name="r" id="r3">
-        <input type="radio" name="r" id="r4">
+        <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
 
             <div class="slide">
                 <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="picture-1">
@@ -48,8 +36,8 @@
             <div class="slide">
                 <img src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="picture-4">
             </div>
+        </div>
     </div>
-</div>
 
 
     <div class="navigation">
@@ -102,5 +90,6 @@
                 };
             });
     }
+    
 </script>
 

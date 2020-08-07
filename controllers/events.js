@@ -61,7 +61,6 @@ router.put('/:id', async (req, res) => {
 
 //----Get Events Create
 router.post('/', async (req, res) => {
-  console.log(req.body);
   try {
     await Today.create(req.body);
     res.redirect('/events');

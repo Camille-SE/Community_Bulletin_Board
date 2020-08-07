@@ -19,7 +19,8 @@
 	<ul class="navHead">
 		<% foundEvents.forEach(events => { %>
 			<li >
-				<a href="/events/<%= events._id %>"><%= events.title %> - <%= events.location %> (<%= events.date %>) </a>
+				<a href="/events/<%= events._id %>"><%= events.title %> - <%= events.location %> 
+					(<%= events.date %>)</a>
 			</li>
 		<% }) %>
 	</ul>

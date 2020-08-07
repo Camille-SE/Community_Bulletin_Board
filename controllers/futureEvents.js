@@ -1,9 +1,8 @@
 const express = require("express")
 const router = express.Router()
-const Today = require('../models/events')
 const Future = require('../models/futureEvents')
 
-
+// ---Get Index
 router.get('/', async (req, res) => {
     try {
         const futureEvents = await Future.find({});
@@ -11,7 +10,7 @@ router.get('/', async (req, res) => {
             foundFutureEvents: futureEvents,
         });
     } catch (error) {
-        res.send(error)
+        res.status(500).send()
     }
 });
 
@@ -32,7 +31,7 @@ router.get('/:id', async (req, res) => {
             foundFutureEvent: futureEvent,
         });
     } catch (error) {
-        res.send(err);
+        res.status(500).send()
     }
 });
 
@@ -44,7 +43,7 @@ router.get('/:id/edit', async (req, res) => {
             foundFutureEvent: futureEvent,
         });
     } catch (error) {
-        res.send(err);
+        res.status(500).send()
     }
 });
 
@@ -54,7 +53,7 @@ router.post('/', async (req, res) => {
         await Future.create(req.body);
         res.redirect('/futureEvents');
     } catch (error) {
-        res.send(err);
+        res.status(500).send()
     }
 });
 
@@ -64,7 +63,7 @@ router.delete('/:id', async (req, res) => {
       await Future.findByIdAndDelete(req.params.id);
       res.redirect('/futureEvents');
     } catch (error) {
-      res.send(err);
+        res.status(500).send()
     }
   });
 
@@ -74,7 +73,7 @@ router.put('/:id', async (req, res) => {
         await Future.findByIdAndUpdate(req.params.id, req.body, { new: true });
         res.redirect('/futureEvents');
     } catch (error) {
-        res.send(err);
+        res.status(500).send()
     }
 });
 

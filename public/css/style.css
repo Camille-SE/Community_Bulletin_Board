@@ -19,6 +19,7 @@
 h1, h2, h3 {
   font-weight: 500;
   }
+  
 h1{
   text-align: center;
 }
@@ -88,6 +89,11 @@ li{
   padding: 5px;
 
 }
+
+.homeNav{
+  display: flex;
+  justify-content: center;
+}
 .navHead{
   background-color: rgba(0, 0, 0, 0.25);
   margin: 5px;
@@ -105,10 +111,6 @@ li{
   display: flex;
   margin: auto;
 }
-img{
-  max-width: 100%;
-  max-height: 100%;
-}
 
 .showBut{
   display: flex;
@@ -116,19 +118,6 @@ img{
   justify-content: start;
   align-content: space-between;
   padding: 10px;
-}
-
-.btn{
-  margin: 5px;
-  color: #63b8ee;
-}
-.btn:hover {
-  background:linear-gradient(to bottom, #536f8a 5%, #63b8ee 100%);
-  background-color:#536f8a;
-}
-.btn:active {
-  position:relative;
-  top:1px;
 }
 
 .formInput{

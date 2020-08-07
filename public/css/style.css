@@ -133,6 +133,9 @@ li{
   margin-bottom: 10px;
 }
 
+.btn{
+  margin: 5px;
+}
 .slidershow {
   width: 700px;
   height: 400px;

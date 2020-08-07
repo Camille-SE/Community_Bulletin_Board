@@ -1,10 +1,9 @@
 const express = require("express")
 const router = express.Router()
 const Today = require('../models/events')
-const Future = require('../models/futureEvents')
 
 
-// ---Index
+// ---Get Index
 router.get('/', async (req, res) => {
   try {
     const events = await Today.find({});
@@ -12,7 +11,7 @@ router.get('/', async (req, res) => {
       foundEvents: events,
     });
   } catch (error) {
-    res.send(error)
+    res.status(500).send()
   }
 });
 
@@ -33,7 +32,7 @@ router.get('/:id', async (req, res) => {
       foundEvent: event,
     });
   } catch (error) {
-      res.send(err);
+    res.status(500).send()
   }
 });
 
@@ -45,7 +44,7 @@ router.get('/:id/edit', async (req, res) => {
       foundEvent: event,
     });
   } catch (error) {
-      res.send(err);
+    res.status(500).send()
   }
 });
 
@@ -55,7 +54,7 @@ router.put('/:id', async (req, res) => {
     await Today.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.redirect('/events');
   } catch (error) {
-    res.send(err);
+    res.status(500).send()
   }
 });
 
@@ -65,7 +64,7 @@ router.post('/', async (req, res) => {
     await Today.create(req.body);
     res.redirect('/events');
   } catch (error) {
-    res.send(err);
+    res.status(500).send()
   }
 });
 
@@ -75,7 +74,7 @@ router.delete('/:id', async (req, res) => {
     await Today.findByIdAndDelete(req.params.id);
     res.redirect('/events');
   } catch (error) {
-    res.send(err);
+    res.status(500).send()
   }
 });
 

@@ -1,5 +1,5 @@
 <div class="home">
-    <div class="homeNav">
+<div class="homeNav">
         <nav class="start" style="position: relative; top: 100px; display: inline-flex; background-color: rgba(0,0,0,.14);">
             <ul style="list-style: none; flex-direction: row; display: inline-flex; text-shadow: 2px 2px red;">
                 <li>
@@ -43,7 +43,14 @@
             </div>
         </div>
     </div>
+</div>
 
+<div class="navigation">
+    <label for="r1" class="bar"></label>
+    <label for="r2" class="bar"></label>
+    <label for="r3" class="bar"></label>
+    <label for="r4" class="bar"></label>
+</div>
 
     <div class="navigation">
         <label for="r1" class="bar"></label>
@@ -54,16 +61,14 @@
     </div>
 
 <script type="text/javascript">
-    if(localStorage.getItem("welcome")){
-        if (localStorage.getItem("welcome") === "1" ){
-            let welcome = parseInt(localStorage.getItem("welcome"))
-            welcome++
-            localStorage.setItem("welcome", welcome)
-            swal({
-                title: "Welcome To Community Events",
-                text: "Please Login To Add Events",
-                closeModel: false,
-                closeOnClickOutside: false,
+let lastShown = parseInt(localStorage.getItem('lastShown'));
+let maxTime = 3600000; 
+if(!lastShown | lastShown + maxTime < Date.now()) { 
+    swal({
+            title: "Welcome To Community Events",
+            text: "Please Login To Add Events",
+            closeModel: false,
+            closeOnClickOutside: false,
             })
             .then((page) => {
                 if (page) {
@@ -74,29 +79,9 @@
                         buttons: false,
                         timer: 1000,
                     });
-                };
-            });
-        }
-    } else {
-        localStorage.setItem("welcome", 1)
-        swal({
-                title: "Welcome To Community Events",
-                text: "Please Login To Add Events",
-                closeModel: false,
-                closeOnClickOutside: false,
-            })
-            .then((page) => {
-                if (page) {
-                    swal({
-                        title: "Thank You For UnderStanding",
-                        text:"Enjoy!!",
-                        icon: "success",
-                        buttons: false,
-                        timer: 1000,
-                    });
-                };
-            });
-    }
-    
+            };
+        });
+  localStorage.setItem('lastShown', Date.now());
+}
 </script>
 

@@ -50,7 +50,6 @@ router.get('/:id/edit', async (req, res) => {
 
 //----Get Events Create
 router.post('/', async (req, res) => {
-    console.log(req.body);
     try {
         await Future.create(req.body);
         res.redirect('/futureEvents');

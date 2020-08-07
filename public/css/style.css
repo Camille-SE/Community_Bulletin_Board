@@ -90,6 +90,7 @@ li{
 .navHead{
   background-color: rgba(0, 0, 0, 0.25);
   margin: 5px;
+  border-radius: 20px;
 }
 
 .ulShow{
@@ -103,6 +104,10 @@ li{
   display: flex;
   margin: auto;
 }
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
 
 .showBut{
   display: flex;
@@ -114,20 +119,7 @@ li{
 
 .btn{
   margin: 5px;
-  box-shadow:inset 0px 1px 0px 0px #bee2f9;
-  background:linear-gradient(to bottom, #63b8ee 5%, #536f8a 100%);
-  background-color:#63b8ee;
-  border-radius:6px;
-  border:1px solid #3866a3;
-  display:inline-block;
-  cursor:pointer;
-  color:#14396a;
-  font-family:Arial;
-  font-size:15px;
-  font-weight:bold;
-  padding:6px 24px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #7cacde;
+  color: #63b8ee;
 }
 .btn:hover {
   background:linear-gradient(to bottom, #536f8a 5%, #63b8ee 100%);

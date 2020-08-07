@@ -15,14 +15,14 @@ const sessionsController = require('./controllers/sessions')
 
 // ---DataBase
 require('./db/db')
- 
+
 
 // ---MiddleWare
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
-  }))
+}))
 
 // ----Parse data
 
@@ -47,3 +47,5 @@ app.use('/futureEvents', futureEventsController)
 app.listen(3000, () => {
     console.log("Events on port 3000")
 });
+
+

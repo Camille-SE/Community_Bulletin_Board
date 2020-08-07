@@ -44,8 +44,6 @@ app.use('/', sessionsController)
 app.use('/events', eventsController)
 app.use('/futureEvents', futureEventsController)
 
-app.listen(3000, () => {
-    console.log("Events on port 3000")
-});
+app.listen(process.env.PORT || 3000)
 
 

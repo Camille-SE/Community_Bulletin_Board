@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 // database connection
 const connectionString = 'mongodb://localhost/community_bulletin_board';
 
-mongoose.connect(connectionString, {
+mongoose.connect( process.env.MONGODB_URI || connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

@@ -4,8 +4,6 @@ const Today = require('../models/events')
 const Future = require('../models/futureEvents')
 
 
-
-
 // ---Index
 router.get('/', async (req, res) => {
   try {
@@ -47,7 +45,7 @@ router.get('/:id/edit', async (req, res) => {
       foundEvent: event,
     });
   } catch (error) {
-    res.send(err);
+      res.send(err);
   }
 });
 

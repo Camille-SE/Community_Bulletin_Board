@@ -30,6 +30,7 @@ body {
         top: 0;
         width: 100vw;
         filter: drop-shadow(0 4px 4px rgba(0,0,0,0.25));
+        
     }
     .home {
         background-image: url("https://trello-attachments.s3.amazonaws.com/5f2349b807a65c6e9fe58342/5f2349b90175376dd8a1bf5a/ca9f71e2b8e3887df516ff233301536a/marc-babin-aQWmCH_b3MU-unsplash.jpg");
@@ -46,6 +47,7 @@ body {
         width: auto;
         height: 863px;
         overflow: scroll;
+        
       }
     li {
         display: inline;
@@ -58,6 +60,7 @@ body {
         display: inline;
         flex-direction: row;
     }
+   
 }
 
 // Default Selectors

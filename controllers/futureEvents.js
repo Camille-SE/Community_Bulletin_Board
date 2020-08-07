@@ -7,7 +7,11 @@ router.get('/', async (req, res) => {
     try {
         const futureEvents = await Future.find({});
         res.render('futureEvents/index', {
-            foundFutureEvents: futureEvents,
+            foundFutureEvents: futureEvents.sort((a,b) => {
+                if(a.date > b.date) return 1;
+                if(a.date < b.date) return -1;
+                return 0;
+              }),
         });
     } catch (error) {
         res.status(500).send()

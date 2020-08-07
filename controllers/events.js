@@ -8,7 +8,11 @@ router.get('/', async (req, res) => {
   try {
     const events = await Today.find({});
     res.render('events/index', {
-      foundEvents: events,
+      foundEvents: events.sort((a,b) => {
+        if(a.date > b.date) return 1;
+        if(a.date < b.date) return -1;
+        return 0;
+      }),
     });
   } catch (error) {
     res.status(500).send()

@@ -1,4 +1,3 @@
-
 # Community Bulletin Board
 
 ## Project Two Description
@@ -15,5 +14,3 @@ Next we created a wireframe that would roughly show the frame of what we wanted 
 ![Homepage](https://git.generalassemb.ly/christopherRyan01/community_bulletin_board/blob/cam/images/Homepage-Wireframe.png)
 ![Events](https://git.generalassemb.ly/christopherRyan01/community_bulletin_board/blob/cam/images/Events-Wireframe.png)
 ![TodayEvent](https://git.generalassemb.ly/christopherRyan01/community_bulletin_board/blob/cam/images/Today-Wireframe.png)
-
-
